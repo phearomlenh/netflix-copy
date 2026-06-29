@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Cambodia - Watch TV Shows</title>
+    <link rel="icon" href="pic/netflix.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Inter:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="head">
+        <img src="pic/nname.png" class="logo" alt="Netflix logo">
+        <a href="signin.html" class="btn btn--signin">Sign In</a>
+    </header>
+
+    <section class="hero">
+        <div class="shortdes">
+            <h1>Unlimited movies, TV <br>shows, and more</h1>
+            <h5>Starts at USD 2,99. Cancel anytime.</h5>
+            <h5>Ready to watch? Enter your email to create or restart your <br>membership.</h5>
+        </div>
+
+        <form class="signup" action="signup.html">
+            <input type="email" placeholder="Email address" class="signup__input" required>
+            <button type="submit" class="btn btn--signup">
+                <span>Get Started</span>
+                <i data-lucide="chevron-right"></i>
+            </button>
+        </form>
+    </section>
+
+    <section class="arc-section">
+        <svg class="arc-svg" viewBox="0 0 1440 400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <radialGradient id="blueGlow" cx="50%" cy="0%" r="60%" fx="50%" fy="0%">
+                    <stop offset="0%" stop-color="#0a1931" stop-opacity="0.9" />
+                    <stop offset="50%" stop-color="#000714" stop-opacity="0.6" />
+                    <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+                </radialGradient>
+            </defs>
+            <path d="M 0,50 Q 720,0 1440,50 L 1440,400 L 0,400 Z" fill="#000000" />
+            <path d="M 0,50 Q 720,0 1440,50 L 1440,400 L 0,400 Z" fill="url(#blueGlow)" />
+            <path d="M 0,50 Q 720,0 1440,50" fill="none" stroke="#dc143c" stroke-width="3" />
+        </svg>
+
+        <div class="content-container">
+            <h2 class="trending-title">Trending Now</h2>
+
+            <div class="trending-wrapper">
+                <button class="scroll-btn scroll-btn--left" aria-label="Scroll left">
+                    <i data-lucide="chevron-left"></i>
+                </button>
+
+                <div class="trending" id="trendingRow">
+                    <div class="postercard">
+                        <div class="posternumber">1</div>
+                        <img src="pic/pacific.jpg" alt="Pacific Rim poster" class="poster">
+                    </div>
+                    <div class="postercard">
+                        <div class="posternumber">2</div>
+                        <img src="pic/pacific2.jpg" alt="Pacific Rim poster" class="poster">
+                    </div>
+                    <div class="postercard">
+                        <div class="posternumber">3</div>
+                        <img src="pic/peaky1.jpg" alt="Peaky Blinders poster" class="poster">
+                    </div>
+                    <div class="postercard">
+                        <div class="posternumber">4</div>
+                        <img src="pic/peaky2.jpg" alt="Peaky Blinders poster" class="poster">
+                    </div>
+                    <div class="postercard">
+                        <div class="posternumber">5</div>
+                        <img src="pic/peaky3.jpg" alt="Peaky Blinders poster" class="poster">
+                    </div>
+                    <div class="postercard">
+                        <div class="posternumber">6</div>
+                        <img src="pic/peaky4.jpg" alt="Peaky Blinders poster" class="poster">
+                    </div>
+                    <div class="postercard">
+                        <div class="posternumber">7</div>
+                        <img src="pic/peaky5.webp" alt="Peaky Blinders poster" class="poster">
+                    </div>
+                    <div class="postercard">
+                        <div class="posternumber">8</div>
+                        <img src="pic/peaky6.jpg" alt="Peaky Blinders poster" class="poster">
+                    </div>
+                </div>
+
+                <button class="scroll-btn scroll-btn--right" aria-label="Scroll right">
+                    <i data-lucide="chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="reasons-section">
+        <div class="reasons-inner">
+            <h2 class="reasons-title">More Reasons to Join</h2>
+
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-text">
+                        <h3>Enjoy on your TV</h3>
+                        <p>Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                    </div>
+                    <div class="reason-icon reason-icon--tv">
+                        <i data-lucide="tv"></i>
+                    </div>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-text">
+                        <h3>Download your shows to watch offline</h3>
+                        <p>Save your favorites easily and always have something to watch.</p>
+                    </div>
+                    <div class="reason-icon reason-icon--download">
+                        <i data-lucide="arrow-down"></i>
+                    </div>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-text">
+                        <h3>Watch everywhere</h3>
+                        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                    </div>
+                    <div class="reason-icon reason-icon--everywhere">
+                        <i data-lucide="wand-2"></i>
+                    </div>
+                </div>
+
+                <div class="reason-card">
+                    <div class="reason-text">
+                        <h3>Create profiles for kids</h3>
+                        <p>Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</p>
+                    </div>
+                    <div class="reason-icon reason-icon--kids">
+                        <i data-lucide="smile"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="FAQ">
+        <div class="faqinner">
+            <h2 class="faqtitle">Frequently Asked Questions</h2>
+
+            <div class="faq-list">
+                <details class="faq-item" open>
+                    <summary class="faq-question">
+                        What is Netflix?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                        <p>You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        How much does Netflix cost?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from USD 2.99 to USD 9.99/month.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        Where can I watch?
+                        <span class="faq-icon"></span>
+                    </summary>
+                        <div class="faq-answer">
+                            <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                            <p>You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                        </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        How do I cancel?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Netflix is flexible. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        What can I watch on Netflix?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        Is Netflix good for kids?
+                        <span class="faq-icon"></span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.</p>
+                        <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don't want kids to see.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+    <section class="bottomsection">
+        <div class="bottomtext">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        </div>
+        <form class="signupbottom" action="signup.html">
+            <input type="email" placeholder="Email address" class="signup__input" required>
+            <button type="submit" class="btn btn--signup">
+                <span>Get Started</span>
+                <i data-lucide="chevron-right"></i>
+            </button>
+        </form>
+    </section>
+    <section class="footer">
+        <p class="questions"><a href="helpcenter.html">Questions? Contact us.</a></p>
+        <div class="footerlinks">
+            <div class="col1">
+                <p><a href="faq.html">FAQ</a></p>
+                <p><a href="mediacenter.html">Media Center</a></p>
+                <p><a href="waytowatch.html">Ways to Watch</a></p>
+                <p><a href="cookiepref.html">Cookie Preferences</a></p>
+                <p><a href="https://www.speedtest.net/">Speed Test</a></p>
+            </div>
+            <div class="col2">
+                <p><a href="Helpcenter.html">Help Center</a></p>
+                <p><a href="investorrel.html">Investor Relations</a></p>
+                <p><a href="termofuse.html">Terms of Use</a></p>
+                <p><a href="corporateinfo.html">Corporate Information</a></p>
+                <p><a href="legalnotice">Legal Notices</a></p>
+            </div>
+            <div class="col3">
+                <p><a href="signin.html">Account</a></p>
+                <p><a href="jobs.html">Jobs</a></p>
+                <p><a href="privacy.html">privacy</a></p>
+                <p><a href="helpcenter.html">Contact US</a></p>
+                <p><a href="movies.html">Only on Netflix</a></p>
+            </div>
+        </div>
+        <div class="lang-wrapper">
+            <button class="lang-selector" id="langBtn">
+                <i data-lucide="languages" class="lang-icon"></i>
+                <span id="langLabel">English</span>
+                <i data-lucide="chevron-down" class="chevron-icon" id="chevronIcon"></i>
+            </button>
+            <ul class="lang-dropdown" id="langDropdown">
+                <li data-lang="English">English</li>
+            </ul>
+        </div>
+        <div class="belowtext">
+            <h7 class="netflixcambodia">Netflix Cambodia</h7>
+            <p class="numcs">This page is created by NUM-CS</p>
+        </div>
+    </section>
+</body>
+</html>
