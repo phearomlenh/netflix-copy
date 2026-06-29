@@ -1,0 +1,632 @@
+/* ============ Reset ============ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============ Base ============ */
+body{
+    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(pic/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ============ Header ============ */
+.head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    margin-top: -35px;
+}
+
+.logo{
+    width: 230px;
+}
+
+.btn{
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', sans-serif;
+    cursor: pointer;
+}
+
+.btn--signin{
+    background-color: #e50914;
+    padding: 8px 25px;
+    margin-top: -20px;
+}
+
+/* ============ Hero text + signup ============ */
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shortdes{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.shortdes h5{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+.signup{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.signup__input{
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 250px;
+    height: 50px;
+    padding: 0 30px;
+    color: white;
+    font-size: 16px;
+}
+
+.signup__input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn--signup{
+    background-color: #e50914;
+    border: none;
+    width: 120px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+/* ============ Arc / trending section ============ */
+.arc-section{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: block;
+    margin-top: 100px;
+}
+
+.arc-svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.content-container{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+.trending-title{
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: -0.5px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+}
+
+/* Wrapper holds the row + the two arrow buttons */
+.trending-wrapper{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* The actual scrolling poster row */
+.trending{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin: 0 80px;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 30px 10px 30px;
+
+    /* hide scrollbar (Firefox / IE) */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* hide scrollbar (Chrome/Safari/Edge) */
+.trending::-webkit-scrollbar{
+    display: none;
+}
+
+/* ============ Posters ============ */
+.poster{
+    flex: 0 0 auto;           /* stop them from shrinking/squishing in the flex row */
+    width: 200px;
+    height: 300px;
+    object-fit: cover;        /* crop instead of distorting aspect ratio */
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+}
+
+.poster:hover{
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    z-index: 3;
+}
+
+/* ============ Scroll arrow buttons ============ */
+.scroll-btn{
+    all: unset;
+    position: absolute;
+    z-index: 25;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 300px;
+    flex-shrink: 0;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease, visibility 0.2s ease;
+    border-radius: 20px;
+}
+.scroll-btn:hover{
+    background-color: rgba(128,128,128,0.8);
+    border: 2px solid white;
+}
+
+.scroll-btn--left{
+    left: 2px;
+}
+
+.scroll-btn--right{
+    right: 2px;
+}
+
+.posternumber{
+    position: absolute;
+    z-index: 10;
+    font-family: "Arial Black", sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+    bottom: 30px;
+    left: -30px;
+    -webkit-text-stroke: 4px white;
+}
+
+.postercard{
+    position: relative;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* ============ More Reasons to Join ============ */
+.reasons-section{
+    width: 100%;
+    background-color: #000000;
+    padding: 80px 0 60px;
+    align-self: stretch;
+}
+
+.reasons-inner{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.reasons-title{
+    color: #ffffff;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+
+.reasons-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.reason-card{
+    background: linear-gradient(135deg, #2d1b3d 0%, #1a1530 100%);
+    border-radius: 8px;
+    padding: 40px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.reason-text h3{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.reason-text p{
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 75%;
+}
+
+.reason-icon{
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reason-icon i, .reason-icon svg{
+    width: 32px;
+    height: 32px;
+}
+
+.reason-icon--tv{
+    background: linear-gradient(135deg, #4a1a6b, #1a1530);
+    color: #c084fc;
+}
+
+.reason-icon--download{
+    background: radial-gradient(circle, #f472b6, #db2777);
+    color: #ffffff;
+}
+
+.reason-icon--everywhere{
+    background: transparent;
+    color: #ec4899;
+}
+
+.reason-icon--kids{
+    background: transparent;
+    color: #ec4899;
+}
+
+/* Stack to single column on small screens */
+@media (max-width: 768px){
+    .reasons-grid{
+        grid-template-columns: 1fr;
+    }
+    .reason-text p{
+        max-width: 100%;
+    }
+}
+
+.FAQ{
+    width: 100%;
+    background-color: #000000;
+    padding: 80px 0 60px;
+    align-self: stretch;
+}
+
+.faqinner{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.faqtitle{
+    color: white;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 30px;
+    margin-top: -110px;
+}
+
+.faq-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.faq-item{
+    background-color: #2d2d2d;
+    border: none;
+}
+
+.faq-question{
+    color: #ffffff;
+    font-size: 22px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 24px 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    position: relative;
+}
+
+/* Remove default browser triangle marker */
+.faq-question::-webkit-details-marker{
+    display: none;
+}
+
+.faq-icon{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.faq-icon::before,
+.faq-icon::after{
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    transition: transform 0.2s ease;
+}
+
+/* Horizontal bar of the plus/cross */
+.faq-icon::before{
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+}
+
+/* Vertical bar of the plus */
+.faq-icon::after{
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+/* When open, rotate both bars so the plus becomes an X */
+.faq-item[open] .faq-icon::before{
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item[open] .faq-icon::after{
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.faq-answer{
+    padding: 0 30px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+}
+
+.faq-answer p{
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.faq-answer p:last-child{
+    margin-bottom: 0;
+}
+
+.bottomsection{
+    width: 100%;
+    background-color: #000000;
+    padding: 80px 0 60px;
+    align-self: stretch;
+}
+
+.bottomtext{
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: -110px
+}
+
+.signupbottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    gap: 5px;
+}
+
+.footer{
+    width: 100%;
+    background-color: #000000;
+    align-self: stretch;
+    margin-top: -55px;
+    padding: 80px 0 80px;
+}
+
+.questions{
+    font-size: 25px;
+    margin-top: -70px;
+    margin-left: 70px;
+}
+
+.questions a{
+    color: rgba(128,128,128,0.8);
+}
+
+.col1, .col2, .col3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.col1 a,
+.col2 a,
+.col3 a{
+    color: rgba(128,128,128,0.8);
+    list-style: none;
+}
+
+
+.footerlinks{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 5px;
+    align-items: center;
+    gap: 200px;
+}
+
+.lang-wrapper{
+    position: relative;
+    display: inline-block;
+}
+
+.lang-selector{
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 70px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.lang-selector:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.lang-icon{
+    width: 18px;
+    height: 18px;
+    stroke: white;
+    flex-shrink: 0;
+}
+
+.chevron-icon{
+    width: 14px;
+    height: 14px;
+    stroke: white;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+/* Rotate chevron when dropdown is open */
+.lang-selector.open .chevron-icon{
+    transform: rotate(180deg);
+}
+
+/* ============ Dropdown ============ */
+.lang-dropdown{
+    all: unset;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 100%;
+    list-style: none;
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 50;
+    margin-left: 70px;
+    margin-top: -10px;
+
+    /* Animation setup */
+    opacity: 0;
+    transform: translateY(-8px) scaleY(0.95);
+    transform-origin: top;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lang-dropdown.show{
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+    pointer-events: auto;
+}
+
+.lang-dropdown li{
+    padding: 10px 16px;
+    color: white;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.15s ease;
+}
+
+.lang-dropdown li:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.lang-dropdown li.active{
+    color: #e50914;
+    font-weight: 600;
+}
+
+.belowtext{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-left: 70px;
+    margin-top: 10px;  
+}
+
+.netflixcambodia{
+    color: rgba(128,128,128,0.8);
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.numcs{
+    color: rgba(128,128,128,0.8);
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
